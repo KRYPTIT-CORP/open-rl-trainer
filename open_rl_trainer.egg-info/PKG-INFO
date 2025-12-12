@@ -1,3 +1,19 @@
+Metadata-Version: 2.4
+Name: open-rl-trainer
+Version: 0.0.1
+Summary: AlphaGo-style reinforcement learning training scaffold with PyTorch.
+Author: XENO-CORPORATION
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: numpy>=1.24
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"
+Provides-Extra: torch
+Requires-Dist: torch>=2.0.0; extra == "torch"
+Dynamic: license-file
+
 # open-rl-trainer
 
 An open-source scaffold for building AlphaGo-style reinforcement learning pipelines with PyTorch. The project supports supervised learning from expert trajectories, self-play with MCTS, and pluggable network architectures for both discrete and continuous action spaces.
