@@ -1,6 +1,6 @@
 import json
 from pathlib import Path
-from typing import Iterable, Iterator, Mapping
+from typing import Iterator, Mapping
 
 
 def load_jsonl(path: Path | str) -> Iterator[Mapping]:
