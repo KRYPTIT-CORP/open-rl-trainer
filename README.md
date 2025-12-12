@@ -1,1 +1,39 @@
 # open-rl-trainer
+
+An open-source scaffold for building AlphaGo-style reinforcement learning pipelines with PyTorch. The project supports supervised learning from expert trajectories, self-play with MCTS, and pluggable network architectures for both discrete and continuous action spaces.
+
+## Features
+- Dual training paradigms: expert pretraining **and** self-play
+- Modular data adapters for JSON/Parquet trajectories
+- Pluggable policy/value networks (ResNet baseline, transformer placeholder, custom heads)
+- Configuration-driven runs (YAML)
+- Example scripts for supervised and self-play loops
+- CI workflow for linting and tests
+
+## Getting started
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -e ".[dev]"
+```
+
+Run the sample config loader test:
+```bash
+python -m pytest
+```
+
+## Repository layout
+```
+open_rl_trainer/
+  data/           # datasets, preprocessing, adapters
+  networks/       # base interfaces, ResNet/transformer stubs, policy heads
+  training/       # supervised + self-play loops, MCTS, loss helpers
+  evaluation/     # metrics and arena utilities
+  utils/          # config, logging, export helpers
+configs/          # example YAML configs
+examples/         # quickstart scripts
+tests/            # pytest suite
+```
+
+## License
+MIT License. See [LICENSE](LICENSE).

@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "open-rl-trainer"
+version = "0.0.1"
+description = "AlphaGo-style reinforcement learning training scaffold with PyTorch."
+authors = [{ name = "XENO-CORPORATION" }]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "pyyaml>=6.0",
+  "numpy>=1.24"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0"
+]
+torch = ["torch>=2.0.0"]
+
+[tool.setuptools.packages.find]
+include = ["open_rl_trainer*"]

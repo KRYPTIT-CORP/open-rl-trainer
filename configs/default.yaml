@@ -1,0 +1,15 @@
+environment:
+  game: go
+  board_size: 19
+training:
+  paradigm: supervised_then_self_play
+  learning_rate: 0.001
+  self_play_games: 10
+network:
+  architecture: resnet
+  blocks: 19
+  action_space: discrete
+  action_dim: 361
+data:
+  format: jsonl
+  path: data/trajectories.jsonl
